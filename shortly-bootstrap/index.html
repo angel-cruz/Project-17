@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shortly | URL Shortener</title>
+  <link rel="icon" href="images/favicon-32x32.png">
+  <!-- responsive containers, grids, spacing and navigation -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="container py-4">
+  <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+    <a class="navbar-brand me-md-4" href="#home"><img src="images/logo.svg" width="121" alt="Shortly"></a>
+    <!--  automatically collapses the menu below the md breakpoint -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <div class="navbar-nav me-auto gap-md-3"><a class="nav-link" href="#features">Features</a><a class="nav-link" href="#features">Pricing</a><a class="nav-link" href="#features">Resources</a></div>
+      <div class="navbar-nav align-items-md-center gap-md-3"><a class="nav-link" href="#shortener">Login</a><a class="btn btn-cyan rounded-pill px-4" href="#shortener">Sign Up</a></div>
+    </div>
+  </nav>
+</header>
+<main id="home">
+  <section class="container hero py-5">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-6 order-2 order-md-1 text-center text-md-start">
+        <h1 class="display-3 fw-bold">More than just shorter links</h1>
+        <p class="lead text-muted-custom">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <a href="#shortener" class="btn btn-cyan rounded-pill px-5 py-3 fw-bold">Get Started</a>
+      </div>
+      <div class="col-md-6 order-1 order-md-2 hero-visual"><img src="images/illustration-working.svg" class="img-fluid" alt="Person working at a computer"></div>
+    </div>
+  </section>
+  <section class="stats" id="features">
+    <div class="container">
+      <form id="shortener" class="shortener rounded-3 p-4 p-md-5" novalidate>
+        <!-- custom error message is connected to the input  -->
+        <div class="row g-3 align-items-start">
+          <div class="col-md-9">
+            <label for="url" class="visually-hidden">URL to shorten</label>
+            <input id="url" type="url" class="form-control form-control-lg" placeholder="Shorten a link here..." aria-describedby="error" required>
+            <div id="error" class="form-error" role="alert"></div>
+          </div>
+          <div class="col-md-3"><button id="shorten-button" class="btn btn-cyan btn-lg w-100 fw-bold" type="submit">Shorten It!</button></div>
+        </div>
+      </form>
+      <div id="results" class="d-grid gap-3" aria-live="polite"></div>
+      <div class="stats-intro text-center mx-auto">
+        <h2 class="fw-bold">Advanced Statistics</h2>
+        <p class="text-muted-custom">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      </div>
+      <!-- Bootstrap grid handles responsive columns -->
+      <div class="row g-4 feature-cards">
+        <div class="col-md-4"><article class="feature-card h-100"><div class="feature-icon"><img src="images/icon-brand-recognition.svg" alt=""></div><h3>Brand Recognition</h3><p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p></article></div>
+        <div class="col-md-4"><article class="feature-card h-100"><div class="feature-icon"><img src="images/icon-detailed-records.svg" alt=""></div><h3>Detailed Records</h3><p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p></article></div>
+        <div class="col-md-4"><article class="feature-card h-100"><div class="feature-icon"><img src="images/icon-fully-customizable.svg" alt=""></div><h3>Fully Customizable</h3><p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p></article></div>
+      </div>
+    </div>
+  </section>
+  <section class="boost text-center py-5"><div class="container"><h2 class="fw-bold mb-4">Boost your links today</h2><a href="#shortener" class="btn btn-cyan rounded-pill px-5 py-3 fw-bold">Get Started</a></div></section>
+</main>
+<footer class="footer py-5"><div class="container"><div class="row gy-4 text-center text-md-start">
+  <div class="col-md-4"><a href="#home"><img src="images/logo.svg" class="footer-logo" width="121" alt="Shortly"></a></div>
+  <div class="col-12 col-md-2"><h4>Features</h4><a href="#shortener">Link Shortening</a><a href="#features">Branded Links</a><a href="#features">Analytics</a></div>
+  <div class="col-12 col-md-2"><h4>Resources</h4><a href="#features">Blog</a><a href="https://dev.bitly.com/">Developers</a><a href="#features">Support</a></div>
+  <div class="col-12 col-md-2"><h4>Company</h4><a href="#home">About</a><a href="#home">Our Team</a><a href="#home">Careers</a><a href="#home">Contact</a></div>
+  <div class="col-12 col-md-2"><div class="d-flex justify-content-center justify-content-md-start gap-3 social">
+    <a href="https://facebook.com" aria-label="Facebook"><img src="images/icon-facebook.svg" alt=""></a><a href="https://twitter.com" aria-label="Twitter"><img src="images/icon-twitter.svg" alt=""></a><a href="https://pinterest.com" aria-label="Pinterest"><img src="images/icon-pinterest.svg" alt=""></a><a href="https://instagram.com" aria-label="Instagram"><img src="images/icon-instagram.svg" alt=""></a>
+  </div></div>
+</div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body></html>
