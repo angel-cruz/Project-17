@@ -1,4 +1,4 @@
-# Project-17
+# Github pages: https://angel-cruz.github.io/Project-17/shortly-bootstrap/index.html
 tracks and displays the location of a given IP address using the IP Geolocation API by IPify  and LeafletJS  for map rendering
 
 # Shortly URL Shortening API – Project Reflection
